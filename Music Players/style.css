@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+
+:root {
+    --color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: var(--color);
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    max-width: 70%;
+    background-color: #0D102A;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.leftside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.leftsideFrist {
+    display: flex;
+    gap: 10px;
+}
+
+.logoImg img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.studioName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.studioName h2 {
+    font-size: 1.6rem;
+}
+
+.rightsideSer {
+    display: flex;
+    width: 18vw;
+}
+
+input[type="text"] {
+    padding-left: 33px;
+}
+
+.magnifying-glass {
+    position: relative;
+    top: 10px;
+    left: 25px;
+}
+
+.Search input {
+    height: 40px;
+    width: 16vw;
+    border-radius: 10px;
+    background-color: #111A40;
+}
+
+.microphone {
+    position: relative;
+    top: 10px;
+    right: 25px;
+}
+
+.rightside {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.rightsideImg img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Main */
+
+.main {
+    display: flex;
+    padding: 1rem 2rem;
+    width: 100%;
+    gap: 25px;
+}
+
+/* banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+}
+
+.bannerImg {
+    display: flex;
+    gap: 15px;
+}
+
+.bannerImg img {
+    height: 250px;
+    width: 100%;
+}
+
+.imgBanner {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgBanner:hover {
+    transform: scale(1.10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+
+/* Latest Release */
+
+.latestRelease {
+    margin-top: 3.5rem;
+}
+
+.latestRelease h2 {
+    font-size: 1.2rem;
+}
+
+#container {
+    width: 85%;
+    height: 200px;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftsideInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.leftsideInfo img {
+    height: 100%;
+    width: 5rem;
+    border-radius: 5px;
+}
+
+/* Overlay */
+
+.divImg {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.divImg img {
+    transition: all 0.6s linear 0s;
+}
+
+.divImg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5.4rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.divImg .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.divImg:hover .overlay {
+    opacity: 0.9;
+}
+
+
+.divTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+}
+
+.divTitle h3 {
+    font-size: 0.8rem;
+}
+
+.divTitle span {
+    font-size: 0.7rem;
+}
+
+.rightsideInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    gap: 0.6rem;
+}
+
+.three-dots-container {
+    position: relative;
+    display: inline-block;
+}
+
+.three-dots {
+    z-index: 0;
+    position: relative;
+    margin-bottom: -12px;
+}
+
+.rightsideInfo input {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.popup-label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.popup-list {
+    display: none;
+    position: absolute;
+    top: 85%;
+    right: 22px;
+    width: 240px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.popup-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-list ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.popup-list ul li {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.icon {
+    color: black;
+}
+
+#popupCheckbox1:checked+.popup-label+.popup-list,
+#popupCheckbox2:checked+.popup-label+.popup-list,
+#popupCheckbox3:checked+.popup-label+.popup-list,
+#popupCheckbox4:checked+.popup-label+.popup-list {
+    display: block;
+}
+
+
+/* Popular Artists */
+
+.popularArtists {
+    display: flex;
+    margin-top: 3.5rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.popularArtistsDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.popularArtists h2 {
+    font-size: 1.2rem;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+/* Overlay */
+.artistDetails {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.artistDetails img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    transition: all 0.6s linear 0s;
+}
+
+.artistDetails .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.artistDetails .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.artistDetails:hover .overlay {
+    opacity: 0.7;
+}
+
+.artistDetails h3 {
+    font-size: 0.7rem;
+}
+
+.artists img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.artistDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Music */
+.music {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    background-color: #111A40;
+}
+
+.square img {
+    height: 6rem;
+    width: 6rem;
+}
+
+
+/* overlay */
+.musicStyle {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.musicStyle img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    transition: all 0.6s linear 0s;
+}
+
+.musicStyle:hover {
+    transform: scale(1);
+}
+
+.musicStyle .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.musicStyle .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* letestRelease3 */
+.letestRelease3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.letestRelease3Imges img {
+    width: 100%;
+    height: 8rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letestRelease3Imges:hover img {
+    transform: scale(1.17);
+}
+
+/* overlay */
+.letestRelease3Imges {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.letestRelease3Imges .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.letestRelease3Imges .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* Letest English */
+.LetestEnglish {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+.english-song-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.song img{
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.4rem;
+}
+
+.english-song{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.song-title{
+    padding: 0.3rem 0;
+}
+
+.song-title h3 {
+    font-size: 0.8rem;
+}
+
+.song-title span {
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.queue {
+    width: 50%;
+    position: sticky;
+    border: 1px solid blue;
+}

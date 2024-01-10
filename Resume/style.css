@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+
+#header {
+    width: 100%;
+    height: 21.8rem;
+    background-image: url(Images/header-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white;
+    padding: 10px;
+}
+
+#unorderList {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.NavBar {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.NavBar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.NavBar a:hover {
+    border-bottom: 1px solid #227476;
+    color: #227476;
+}
+
+#name {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+}
+
+
+/* Main */
+
+section {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(2n) {
+    background-color: white;
+}
+
+section:nth-child(2n+1) {
+    background-color: lightgrey;
+}
+
+#about {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#about div {
+    margin-top: -6rem;
+}
+
+#about p {
+    width: 40%;
+    margin: auto;
+    text-align: justify;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#img-div {
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+}
+
+#img-div img {
+    width: 100%;
+    height: 12rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 1px 1px 12px rgb(196, 173, 161);
+}
+
+/* Skill section */
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span {
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+.skill-display {
+    width: 70%;
+    max-width: 35%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mb1rem {
+    margin-bottom: 2rem;
+}
+
+.skill-name span {
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 1.2rem;
+}
+
+/* Percentages classes */
+.eighty-five-percent {
+    width: 85%;
+    height: inherit;
+}
+
+.eighty-percent {
+    width: 10%;
+    height: inherit;
+}
+
+.eighty-percent {
+    width: 80%;
+    height: inherit;
+}
+
+.seventy-eight-percent {
+    width: 78%;
+    height: inherit;
+}
+
+.seventy-two-percent {
+    width: 72%;
+    height: inherit;
+}
+
+.sixty-five-percent {
+    width: 65%;
+    height: inherit;
+}
+
+.seventy-percent {
+    width: 70%;
+    height: inherit;
+}
+
+.sixty-percent {
+    width: 60%;
+    height: inherit;
+}
+
+/* Percentages color classes */
+.bg-blue {
+    background-color: #2857a4;
+    border-radius: 1rem;
+    height: 1.8rem;
+}
+
+.bg-pink {
+    background-color: #F0AFBA;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-red {
+    background-color: #E48080;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-cyan {
+    background-color: #A2F5F5;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-brown {
+    background-color: #F8A5A5;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-burlywood {
+    background-color: #FCDCAE;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-violet {
+    background-color: #FBBAFF;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+.bg-steelblue {
+    background-color: #ADDAFF;
+    border-radius: 1rem;
+    height: 1.7rem;
+}
+
+
+.skill-progress {
+    width: 10rem;
+    max-width: 10rem;
+    height: 1.9rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.skill-progress>div {
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* Contact Section */
+
+
+.contact {
+    background-image: linear-gradient(to right, #2857a4, #403066);
+}
+
+.contact span {
+    color: white;
+}
+
+.main-div {
+    width: 70%;
+    max-width: 75%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+}
+
+#input-filed {
+    padding: 2%;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: transparent;
+    width: 45%;
+    /* border: 1px solid black; */
+}
+
+.input-field input {
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    margin: 5%;
+}
+
+
+#input-filed input {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+    color: white;
+}
+
+#fname {
+    margin-top: 10%;
+    font-size: 1.2rem;
+    background: none;
+    color: white;
+    border: 1px solid;
+}
+
+#input-filed button {
+    padding: 3%;
+}
+
+
+#address-details {
+    width: 50%;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 2.5rem;
+    /* border: 1px solid blue; */
+}
+
+#headingg-contact {
+    margin-top: 13%;
+}

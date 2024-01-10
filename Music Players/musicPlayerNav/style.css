@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 75%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    background-color: #0D102A;
+}
+
+/* NavBar */
+.navbar {
+    width: 75%;
+    height: 5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.NavBar-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-Img img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    margin: 0 1.5rem;
+}
+
+.logo-section h2 {
+    font-size: 1.6rem;
+}
+
+.favourites-section {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.NavBar-Right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+input[type="text"] {
+    padding-left: 2rem;
+}
+
+.magnifying-glass {
+    position: relative;
+    top: 10px;
+    left: 25px;
+    height: 1.2rem;
+}
+
+.search-bar input {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #111A40;
+}
+
+.microphone {
+    position: relative;
+    top: 10px;
+    right: 25px;
+    height: 1.2rem;
+}
+
+.profile-Photo img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: 0 1.5rem;
+}
+
+/* Main Content */
+.content {
+    width: 100%;
+    display: flex;
+}
+
+.main {
+    width: 70%;
+    margin-left: 1.5rem;
+    margin-top: 115px;
+}
+
+/* banner */
+.banner {
+    display: flex;
+    margin: 1rem 1.6rem;
+    /* border: 1px solid red; */
+}
+
+.bannerImg {
+    display: flex;
+    gap: 15px;
+}
+
+.bannerImg img {
+    height: 220px;
+    width: 100%;
+}
+
+.imgBanner {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgBanner:hover {
+    transform: scale(1.10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+
+/* Latest Release */
+
+.latestRelease {
+    margin: 4rem 1.6rem;
+    /* border: 1px solid red; */
+}
+
+.latestRelease h2 {
+    font-size: 1.2rem;
+}
+
+#container {
+    width: 85%;
+    height: 200px;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.letest-Release-img {
+    display: flex;
+    gap: 20px;
+}
+
+.letest-Release-img img {
+    height: 100%;
+    width: 5rem;
+    border-radius: 5px;
+}
+
+/* Overlay */
+
+.Image-letest-release {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.Image-letest-release img {
+    transition: all 0.6s linear 0s;
+}
+
+.Image-letest-release .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5.4rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.Image-letest-release .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.Image-letest-release:hover .overlay {
+    opacity: 0.9;
+}
+
+
+.letest-Release-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+}
+
+.letest-Release-title h3 {
+    font-size: 0.8rem;
+}
+
+.letest-Release-title span {
+    font-size: 0.7rem;
+}
+
+.letest-Release-three-dot {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    gap: 0.6rem;
+}
+
+.three-dots-container {
+    position: relative;
+    display: inline-block;
+}
+
+.three-dots {
+    z-index: 0;
+    position: relative;
+    margin-bottom: -12px;
+}
+
+.letest-Release-three-dot input {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.popup-label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.popup-list {
+    display: none;
+    position: absolute;
+    top: 85%;
+    right: 22px;
+    width: 240px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.popup-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-list ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.popup-list ul li {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.icon {
+    color: black;
+}
+
+#popupCheckbox1:checked+.popup-label+.popup-list,
+#popupCheckbox2:checked+.popup-label+.popup-list,
+#popupCheckbox3:checked+.popup-label+.popup-list,
+#popupCheckbox4:checked+.popup-label+.popup-list {
+    display: block;
+}
+
+
+/* Popular Artists */
+
+.popularArtists {
+    display: flex;
+    margin: 4rem 1.6rem;
+    flex-direction: column;
+    gap: 1rem;
+    /* border: 1px solid red; */
+}
+
+.popularArtistsDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid blue;
+}
+
+.popularArtists h2 {
+    font-size: 1.2rem;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    /* border: 1px solid red; */
+}
+
+/* Overlay */
+.artistDetails {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    border: 1px solid red;
+}
+
+.artistDetails img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    transition: all 0.6s linear 0s;
+}
+
+.artistDetails .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.artistDetails .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.artistDetails:hover .overlay {
+    opacity: 0.7;
+}
+
+.artistDetails h3 {
+    font-size: 0.7rem;
+}
+
+.artists img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.artistDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Music */
+.music {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    background-color: #111A40;
+}
+
+.square img {
+    height: 6rem;
+    width: 6rem;
+    border: 1px solid blue;
+}
+
+
+/* overlay */
+.musicStyle {
+    position: relative;
+    overflow: none;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    border: 1px solid blue;
+}
+
+.musicStyle img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    transition: all 0.6s linear 0s;
+}
+
+.musicStyle:hover {
+    transform: scale(1);
+}
+
+.musicStyle .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.musicStyle .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* letestRelease3 */
+.letestRelease3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.letestRelease3Imges img {
+    width: 100%;
+    height: 8rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letestRelease3Imges:hover img {
+    transform: scale(1.17);
+}
+
+/* overlay */
+.letestRelease3Imges {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.letestRelease3Imges .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: rgb(168, 152, 152, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.letestRelease3Imges .overlay1 span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* Letest English */
+.LetestEnglish {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 1.6rem;
+    gap: 1rem;
+}
+
+.english-song-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.song img{
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.4rem;
+}
+
+.english-song{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.song-title{
+    padding: 0.3rem 0;
+}
+
+.song-title h3 {
+    font-size: 0.8rem;
+}
+
+.song-title span {
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.queue {
+    width: 30%;
+    margin-right: 1.5rem;
+    margin-top: 115px;
+    /* position: relative; */
+    /* top: 115px; */
+
+    background-color: #caace7;
+}
+
+.footer {
+    width: 75%;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #383f2a;
+}
